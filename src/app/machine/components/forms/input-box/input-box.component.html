@@ -1,0 +1,9 @@
+<div [formGroup]="frmGroup">
+  <mat-form-field style="padding: 24px" class="example-form-field">
+    <mat-label>{{configData.label}}</mat-label>
+    <input [formControlName]="configData.name" matInput type="text">
+    <!-- <button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+      <mat-icon>close</mat-icon>
+    </button> -->
+  </mat-form-field>
+</div>

@@ -1,0 +1,21 @@
+<h1 style="text-align: center;text-decoration: underline;">{{registrationConfig?.header?.title}}</h1>
+<input type="file" (change)="handleFileInput($event.target)" accept=".json">
+
+<button type="button" (click)="renderForm()">Upload</button>
+<!-- <app-instant-form [configData]="registrationConfig" (form)="getForm($event)"></app-instant-form> -->
+<div *ngIf="!newForm">
+    <app-instant-form [configData]="registrationConfig" (form)="getForm($event)"></app-instant-form>
+</div>
+<div *ngIf="newForm">
+    <app-instant-form [configData]="registrationConfig" (form)="getForm($event)"></app-instant-form>
+</div>
+<div style="text-align: center;">
+    <button mat-raised-button color="accent" type="button" (click)="submit()">Register</button>
+</div>
+
+<div *ngIf="submitted" style="margin-top: 50px;text-align: center;">
+    ================================================xxxxxxxxx==============================================
+    <div style="margin-top: 50px;text-align: center;">
+        {{data}}
+    </div>
+</div>
