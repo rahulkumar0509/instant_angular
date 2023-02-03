@@ -22,6 +22,9 @@ import { SlideToggleComponent } from './machine/components/forms/slide-toggle/sl
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import {MatInputModule} from '@angular/material/input';
 import { RegistrationComponent } from './business-screens/registration/registration.component';
+import { FoodBlogComponent } from './business-screens/food-blog/food-blog/food-blog.component';
+import { HeaderSimpleComponent } from './machine/components/headers/header-simple/header-simple.component';
+import { FoodArticleComponent } from './business-screens/food-blog/food-article/food-article.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +39,10 @@ import { RegistrationComponent } from './business-screens/registration/registrat
     AutocompleteComponent,
     CardComponent,
     SlideToggleComponent,
-    RegistrationComponent
+    RegistrationComponent,
+    FoodBlogComponent,
+    HeaderSimpleComponent,
+    FoodArticleComponent
   ],
   imports: [
     BrowserModule,

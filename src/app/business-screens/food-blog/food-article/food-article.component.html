@@ -1,0 +1,118 @@
+<app-header-simple *ngIf="header" [headerInfo]="header"></app-header-simple>
+<div class="food-blog">
+    <div class="container">
+        <header>
+            <h2 class="title">{{blogContent.title}}</h2>
+            <div class="tags">
+                <small>{{blogContent.tags[0]}}</small>
+                <small>{{blogContent.tags[1]}}</small>
+            </div>
+            <p class="slogan">
+                {{blogContent.slogan}}
+            </p>
+            <div class="posted">
+                {{blogContent.posted}}
+            </div>
+        </header>
+        <article>
+            <section class="content-section">
+                <div class="featured-image">
+                    <!-- <img width="100%" src="../../assets/food-blog/{{blogContent.image}}" /> -->
+                    <img width="100%" src="data:image/png;base64,{{blogContent.image}}" />
+                </div>
+                <div class="brief">
+                    <p style="padding-top: 24px">
+                        <strong style="font-weight: bold">
+                           {{blogContent.brief.title}}
+                        </strong>
+                    </p>
+                    <p style="padding-top: 24px">
+                       {{blogContent.brief.introduction}}
+                    </p>
+                </div>
+                <div class="content">
+                    <div *ngFor="let data of blogContent.content" class="actual-repeat">
+                        <h2 class="title">
+                            {{data.title}}
+                        </h2>
+                        <p class="intro description">
+                            {{data.introduction}}
+                        </p>
+                        <p *ngIf="data.contentType==='text'" class="description">
+                            {{data.description}}
+                        </p>
+                        <ul *ngIf="data.contentType==='ul'" class="description">
+                            <div *ngFor="let text of data.description.split('\n')">
+                                <li *ngIf="text">
+                                    <span>{{text}}</span>
+                                </li>
+                            </div>
+                        </ul>
+                        <ol *ngIf="data.contentType==='ol'" class="description">
+                            <li *ngFor="let text of data.description.split('\n')">
+                                {{text}}
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </section>
+            <aside class="sidebar-section">
+                <div class="author">
+                    <h3 style="font-weight: bold;margin-bottom: 14px;">Hi 👋</h3>
+                    <p style="font-size: 16px;margin-bottom: 14px;line-height: 20px;">
+                        <strong>delhi's famous kulchas</strong> is an award winning food blog that’s been around since
+                        2010 featuring hundreds of easy, fun, and delicious modern Asian- and globally-inspired recipes
+                        that celebrate the joy of home cooking. Our tips and tricks will have you cooking like a pro in
+                        no time. Pull up a chair and stick around for awhile, let’s be friends and eat together!
+                    </p>
+                    <p>
+                        -Rahul
+                    </p>
+                </div>
+                <div class="featured-recipes">
+                    <h4 class="sidebar-title">Featured Recipes</h4>
+                    <a href="/blogs"
+                        title="Hainanese Chicken Rice: The Best Easy One Pot Chicken and Rice Recipe">
+                        <small class="category"> chinese food </small>
+                        <h4>Hainanese Chicken Rice: The Best Easy One Pot Chicken and Rice Recipe</h4>
+                        <div class="feed-item">
+                            <p class="feed-text">The best kind of food hug: chicken and rice</p>
+                        </div>
+                    </a>
+                    <a href="/blogs"
+                        title="Hainanese Chicken Rice: The Best Easy One Pot Chicken and Rice Recipe">
+                        <small class="category"> chinese food </small>
+                        <h4>Hainanese Chicken Rice: The Best Easy One Pot Chicken and Rice Recipe</h4>
+                        <div class="feed-item">
+                            <p class="feed-text">The best kind of food hug: chicken and rice</p>
+                        </div>
+                    </a>
+                    <a href="/blogs"
+                        title="Hainanese Chicken Rice: The Best Easy One Pot Chicken and Rice Recipe">
+                        <small class="category"> chinese food </small>
+                        <h4>Hainanese Chicken Rice: The Best Easy One Pot Chicken and Rice Recipe</h4>
+                        <div class="feed-item">
+                            <p class="feed-text">The best kind of food hug: chicken and rice</p>
+                        </div>
+                    </a>
+                    <a href="/blogs"
+                        title="Hainanese Chicken Rice: The Best Easy One Pot Chicken and Rice Recipe">
+                        <small class="category"> chinese food </small>
+                        <h4>Hainanese Chicken Rice: The Best Easy One Pot Chicken and Rice Recipe</h4>
+                        <div class="feed-item">
+                            <p class="feed-text">The best kind of food hug: chicken and rice</p>
+                        </div>
+                    </a>
+                    <a href="/blogs"
+                        title="Hainanese Chicken Rice: The Best Easy One Pot Chicken and Rice Recipe">
+                        <small class="category"> chinese food </small>
+                        <h4>Hainanese Chicken Rice: The Best Easy One Pot Chicken and Rice Recipe</h4>
+                        <div class="feed-item">
+                            <p class="feed-text">The best kind of food hug: chicken and rice</p>
+                        </div>
+                    </a>
+                </div>
+            </aside>
+        </article>
+    </div>
+</div>

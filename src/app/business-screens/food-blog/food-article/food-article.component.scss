@@ -1,0 +1,150 @@
+.food-blog {
+    font-family: Arial, Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    strong, small, h1, h2, h3, h4{
+        font-weight: bold;
+    }
+    a{
+        text-decoration: none;
+        color: none;
+    }
+    
+
+    // background-image: url('../../assets/food-blog/foodiesfeed.com_berries-smoothie-bowl.jpg');
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    .container {
+
+        // background-color: white;
+        // opacity: 0.8;
+        header {
+            text-align: center;
+            margin: 0 auto;
+            padding: 20px 0 35px;
+
+            .title {
+                font-size: 3em;
+                font-weight: 700;
+            }
+
+            .tags {
+                margin-top: 24px;
+
+                small {
+                    cursor: pointer;
+                    padding: 5px;
+                    background-color: black;
+                    color: white;
+                    margin-right: 5px;
+                    border-radius: 5px;
+                    font-size: 14px;
+                    font-weight: 600;
+                }
+            }
+
+            .slogan {
+                margin-top: 24px;
+
+            }
+
+            .posted {
+                margin-top: 24px;
+                font-size: 12px;
+                font-weight: 700;
+            }
+        }
+
+        article {
+            font-size: 1.5em;
+            // max-width: 80%;
+            // margin: 0 auto;
+            padding: 0 24px;
+            text-align: center;
+            display: grid;
+            grid-template-columns: 1fr 55% 40px 25% 1fr;
+            font-family: 'nobel';
+
+            .content-section {
+                grid-column: 2;
+                text-align: left;
+                line-height: 30px;
+
+                .brief {
+                    font-size: 0.8em;
+                    margin: 20px 0 40px 0;
+                }
+
+                .content {
+                    font-family: Arial, Helvetica, sans-serif;
+                    margin: 24px 0;
+                    .title {
+                        font-size: 32px;
+                        font-weight: bold;
+                        margin-bottom: 24px;
+                    }
+                    .description{
+                        font-size: 17px;
+                        margin-bottom: 32px;
+                        text-align: justify;
+                    }
+                    ul, ol{
+                        padding-left: 40px;
+                        li{
+                            padding-right: 50px;
+                            margin-bottom: 15px;
+                        }
+                    } 
+                }
+            }
+
+            .sidebar-section {
+                grid-column: 4;
+                .author{
+                    border: 1px solid black;
+                    padding: 14px;
+                }
+                .featured-recipes{
+                    margin-top: 60px;
+                   .sidebar-title{
+                        margin: 20px 0;
+                   }
+                   a{
+                    counter-increment: section;
+                    // padding-left: 50px;
+                    position: relative;
+                    border-top: 1px solid #888;
+                    padding: 20px 0 20px 50px;
+                    display: block;
+                    color: black;
+                    text-align: left;
+                    &:before {
+                        content: counter(section);
+                        position: absolute;
+                        top: 40px;
+                        left: 0;
+                        font-size: 70px;
+                        font-family: serif;
+                        color: #eee;
+                    }
+                    small{
+
+                        font-size: 14px;
+                        text-transform: capitalize;
+                        color: #d32339;
+                    }
+                    h4{
+                        margin: 5px 0;
+                    }
+                    div{
+                        p{
+                            font-size: 14px;
+                            line-height: 26px;
+                        }
+                    }
+
+                   }
+                }
+            }
+        }
+    }
+}

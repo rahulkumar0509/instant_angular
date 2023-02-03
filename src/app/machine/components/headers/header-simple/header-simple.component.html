@@ -1,0 +1,22 @@
+<header class="header-simple">
+    <div class="header-container">
+        <div class="brand-name">
+            <a href="/blog/food">
+                <span>{{headerInfo.name}}</span>
+                <span>
+                    <!-- place the logo here -->
+                    <!-- <img src="../../../assets/logo.png" height="100" width="100"/> -->
+                </span>
+            </a>        
+        </div>
+        <div class="site-menu">
+            <ul>
+                <li *ngFor="let m of headerInfo.menu">{{m}}</li>
+            </ul>
+        </div>
+        <div class="site-small-menu">
+            <span>Menu</span>
+        </div>
+    </div>
+    <hr class="head-divide">
+</header>

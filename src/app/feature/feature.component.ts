@@ -13,13 +13,6 @@ export class FeatureComponent implements OnInit {
   ngOnInit(): void {
   }
   redirectToFeature(feature: string){
-    switch(feature){
-      case 'instant_screen':
-        this.router.navigateByUrl('/registration');
-        break;
-      default:
-        console.log('do nothing');
-        break;
-    }
+    this.router.navigateByUrl(feature);
   }
 }

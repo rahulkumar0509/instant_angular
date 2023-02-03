@@ -1,0 +1,116 @@
+.header-simple{
+    padding: 20px 0;
+    font-family: fantasy;
+    div.header-container{
+        display: flex;
+        max-width: 90%;
+        margin: auto;
+        padding: 1.5em;
+        padding-bottom: 1em;
+        div.brand-name{
+            width: 60%;
+            a{
+                text-decoration: none;
+                color: black;
+                padding: 15px;
+                font-size: 3em;
+                font-weight: bold;
+                display: flex;
+                span{
+                    padding-top: 20px;
+                }
+            }
+        }
+        div.site-menu{
+            display: flex;
+            width: 40%;
+            justify-content: flex-end;
+            ul{
+                display: flex;
+                // width: 70%;
+                list-style: none;
+                li{
+                    padding: 15px;
+                    font-size: 1.5em;
+                    // border-radius: 5px;
+                    cursor: pointer;
+                    &:hover{
+                        // background-color: black;
+                        // color: white;
+                        // border-left: 3px solid;
+                        // border-right: 3px solid;
+                        border-bottom: 3px solid;
+                    }
+                }
+            }
+        }
+        .site-small-menu{
+            display: none;
+        }
+    }
+    hr{
+        max-width: 98%;
+        margin: 0 auto;
+        background: #000;
+        height: 2px;
+    }
+}
+
+@media only screen and (max-width: 1088px) {
+    .header-simple{
+        div.header-container{
+            max-width: 95%;
+            padding: 15px;
+            div.brand-name{
+                width: 80%;
+                a{
+                    font-size: 1.8em;
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width: 770px) {
+    .header-simple{
+        div.header-container{
+            div.brand-name{
+                width: 80%;
+                a{
+                    font-size: 2em;
+                }
+            }
+            div.site-menu{
+                display: none;
+            }
+            .site-small-menu{
+                display: flex;
+                width: 20%;
+                justify-content: flex-end;
+                font-size: 1.8em;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 500px) {
+    .header-simple{
+        div.header-container{
+            max-width: 100%;
+            padding: 15px;
+            div.brand-name{
+                width: 80%;
+                a{
+                    font-size: 1.5em;
+                }
+            }
+            div.site-menu{
+                display: none;
+            }
+            .site-small-menu{
+                display: flex;
+                width: 20%;
+                justify-content: flex-end;
+                font-size: 1.5em;
+            }
+        }
+    }
+}

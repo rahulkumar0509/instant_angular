@@ -1,0 +1,17 @@
+<app-header-simple [headerInfo]="header"></app-header-simple>
+<div class="hpw submenu">
+    <a *ngFor="let category of foodCategory" href="blogs/food/article" class="hover-link">{{category}}</a>
+</div>
+<div class="food-blog">
+    <div class="content-wrapper" style="width: 100%">
+        <div (click)="setBlogData(data)" *ngFor="let data of foodBlogs;let i=index" class="items item-{{i+1}}">
+            <a class="image" href="blogs/food/article">
+                <img src="data:image/png;base64,{{data['image']}}" />
+            </a>
+            <a href="blogs/food/article" class="caption">
+                <small class="category">{{data['subtype']}}</small>
+                <h2><span>{{data['title']}}</span></h2>
+            </a>
+        </div>
+    </div>
+</div>
